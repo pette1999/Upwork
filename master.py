@@ -296,11 +296,7 @@ def Main():
 
     # 3) upload the rest to their respective websites
     print('File upload step...')
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    options.add_argument('window-size=1200x600')
-    browser = webdriver.Chrome(chrome_options=options)
-
+    browser = webdriver.Chrome()
     numFilesUp = 0
     numFilesUp += uploadFile((filePaths['ShopHQ'], filePaths['BBB'], filePaths['Belk']), loginComHub[0], 'joshlast', '603550Duke6!', comHubXPath, loginComHub[1], '//*[@id="chub-navi-user-name"]', '//*[@id="pageParent"]/tbody/tr[6]/td/table/tbody/tr[3]/td/table/tbody/tr[2]/td/table/tbody/tr/td[2]/form/div/div/div[1]/span')
     numFilesUp += uploadFile(filePaths['Hibbits'], loginRadial[0], 'HBT_Southfield', '603550Duke', radialXPath, loginRadial[1], '/html/body/table/tbody/tr[2]/td/table/tbody/tr[2]/td/table/tbody/tr/td[2]/table/tbody/tr/td[4]/a', '/html/body/table/tbody/tr[3]/td[3]/table/tbody/tr[2]/td[2]/form/table/tbody/tr[2]/td[2]/input')

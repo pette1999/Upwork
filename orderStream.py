@@ -143,13 +143,9 @@ def ImportTrackingData():
 #
 def Login(username, password, driver):
     global browser
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    options.add_argument('window-size=1200x600')
-    browser = webdriver.Chrome(chrome_options=options)
-
-    # webDriver = browsers.get(driver)
-    # browser = webDriver()
+    
+    webDriver = browsers.get(driver)
+    browser = webDriver()
     browser.get(loginPage)
     
     userBox = browser.find_element_by_id('username')
